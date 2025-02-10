@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event_web</title>
+
+    <!-- swiper js -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css">
+    <!--  font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <!-- link style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Add this in the head of your HTML file -->
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    
+   </head>
+<body onload="onPageLoad()">
+    <!-- header start/navbar -->
+     <header>
+        <a href="#" class="logo">
+            <img src="images/logo/logo 2.jpg" alt="">
+        </a>
+        <nav class="navbar">
+            <!-- <a href="registration">Register</a> -->
+            <a href="#home">Home</a>
+            <a href="#services">Service</a>
+            <a href="#Review">Review</a>
+            <a href="#about">About</a>
+            <a href="#Contact">Login</a>
+        </nav>
+        <div class="fas fa-bars" id="MenuBtn"></div>
+     </header>
+     <!-- header navbar/end -->
+      
+    <!-- home start -->
+      <section id="home" class="home">
+        <div class="homecontent">
+            <h3>Let us design your joy</h3>
+            <p> we take your vision and transform it into a masterpiece. From seamless planning to flawless execution, we ensure every moment radiates happiness and reflects your story. Trust us to design your joy, because your celebration deserves nothing less than extraordinary.</p>
+
+        </div>
+
+      
+      </section>
+    <!-- home end -->
+     
+    <!-- service page  start-->
+    <section id="services" class="services">
+        <h1 class="head">
+            <span>Our</span> services
+        </h1>
+        <div class="boxContainer">
+            <!-- Catering Service Box -->
+            <div class="box">
+                <i class="fa-solid fa-bowl-food"></i>
+                <h3>catering service</h3>
+                <p>"Savor the flavor of perfection with our exceptional catering services"</p>
+                <button class="view-btn" onclick="cateringshowForm()">view</button>
+            </div>
+           
+
+            <!-- Hall Details Box -->
+            <div class="box">
+                <i class="fa-solid fa-street-view"></i>
+                <h3>Hall details</h3>
+                <p>"Elevate your celebration with our stunning hall designs, crafted to impress and delight"</p>
+                <button class="view-btn" onclick="hallshowForm()">view</button>
+            </div>
+           
+
+            <!-- Decoration Service Box -->
+            <div class="box">
+                <i class="fa-solid fa-paintbrush "></i>
+                <h3>decoration service</h3>
+                <p>"Make a lasting impression with our luxurious decoration, perfectly blending elegance"</p>
+                <button class="view-btn" onclick="decorationshowForm()">view</button>
+            </div>
+            <!-- Decoration Form Section -->
+           
+            <!-- View Booking Box -->
+            <div class="box">
+                <i class="fa-solid fa-check "></i>
+                <h3>view booking</h3>
+                <p>"Secure your date and make unforgettable moments with our special tricks"</p>
+                <button class="view-btn" onclick="showForm()">view</button>
+            </div>
+        </div>
+    </section>
+
+     <!-- Catering Form Section -->
+     <div id="cateringform-section" class="cateringform-section">
+        <h2><span>catering</span> service</h2>
+        <div class="imgContainer" id="imgContainer">
+            <div>
+                <img src="images/event/corporate 1.jpg" alt="img1">
+                <h5>corporate </h5>
+            </div>
+            <div>
+                <img src="images/event/wedding 1.jpg" alt="img2">
+            <h5>wedding </h5>
+            </div>
+            <div>
+                <img src="images/event/social 1.jpg" alt="img3">
+            <h5>social </h5>
+            </div>
+            <div>
+                <img src="images/event/mobile 1.jpg" alt="img4">
+            <h5>mobile</h5><br><br>
+            </div>
+        </div>
+        <div class="addCateringForm">
+            <form id="addCateringForm">
+                <!-- <label for="catering">choose event</label> -->
+                <select name="catering" id="catering">
+                    <option>Wedding</option>
+                    <option>Social</option>
+                    <option>Mobile</option>
+                    <option>Corporate</option>
+                </select>
+                <input type="number" id="cateringPrice" placeholder="Plate Count" required />
+                <button type="submit">book here</button>
+            </form>
+        </div>
+        
+        
+    </div>
+
+     <!-- Hall Form Section -->
+     <div id="hallform-section" class="hallform-section">
+        <h2><span>hall</span> detail</h2>
+        <div class="img-container" id="imgeContainer">
+            <div>
+                <img src="images/hall de/bellired 1.jpg" alt="img1">
+                <h5>Billiard hall </h5>
+            </div>
+            <div>
+                <img src="images/hall de/concert 1.jpg" alt="img2">
+            <h5>Concert hall</h5>
+            </div>
+            <div>
+                <img src="images/hall de/dance 1.jpg" alt="img3">
+            <h5>Dance hall</h5>
+            </div>
+            <div>
+                <img src="images/hall de/dinning 1.jpg" alt="img4">
+            <h5>Dining hall</h5><br><br>
+            </div>
+        </div>
+        <div class="addHallForm">
+            <form id="addHallForm" >
+                <select name="hallname" id="hallname">
+                    <option>Billiard</option>
+                    <option>Concert</option>
+                    <option>Dance</option>
+                    <option>Dining</option>
+                </select>
+                <!-- <input type="text" id="hallName" placeholder="Hall Name" required /> -->
+                <!-- <input type="text" id="hallLocation" placeholder="Location" required /> -->
+                <input type="number" id="hallCapacity" placeholder="Capacity" required />
+                <!-- <input type="number" id="hallPrice" placeholder="Price" required /> -->
+                <button type="submit">book here</button>
+            </form>
+        </div>
+       
+    </div>
+
+     <!-- decoration Section -->
+    <div id="halldform-section" class="halldform-section">
+        <h2><span>decoration</span> service</h2>
+        <div class="img-container" id="imaggContainer">
+            <div>
+                <img src="images/decorate/pixeles.jpg" alt="img1">
+                <h5>Rooms </h5>
+            </div>
+            <div>
+                <img src="images/decorate/reception 1.jpg" alt="img2">
+            <h5>Reception </h5>
+            </div>
+            <div>
+                <img src="images/decorate/room 1.jpg" alt="img3">
+            <h5>Home</h5>
+            </div>
+            <div>
+                <img src="images/hall de/dinning 1.jpg" alt="img4">
+            <h5>Statue</h5><br><br>
+            </div>
+        </div>
+        <div class="addDecorationForm">
+            <form id="addDecorationForm">
+                <select name="decoration" id="decoration">
+                    <option>Room</option>
+                    <option>Reception</option>
+                    <option>Home</option>
+                    <option>Statue</option>
+                </select>
+                <!-- <input type="text" id="decorationName" placeholder="Decoration Name" required /> -->
+                <!-- <input type="number" id="decorationPrice" placeholder="Price" required /> -->
+                 <input type="date">
+                <button type="submit">book here</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- service page end -->
+
+    <!-- review section start -->
+     <section id="Review" class="review">
+        <h1 class="head">Client's <span>Review</span></h1>
+
+        <div class="ReviewSlider swiper-container">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/review/fm1.jpg" alt="">
+                        <div class="UserInfo">
+                            <h3>Ollivia</h3>
+                            <span>Happy Client</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem, 
+                        ex voluptate quod eaque amet natus inventore explicabo omnis molestiae!</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/review/m1.jpg" alt="">
+                        <div class="UserInfo">
+                            <h3>Liam</h3>
+                            <span>Happy Client</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem, 
+                        ex voluptate quod eaque amet natus inventore explicabo omnis molestiae!</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/review/fm2.jpg" alt="">
+                        <div class="UserInfo">
+                            <h3>Emma</h3>
+                            <span>Happy Client</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem, 
+                        ex voluptate quod eaque amet natus inventore explicabo omnis molestiae!</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/review/m2.jpg" alt="">
+                        <div class="UserInfo">
+                            <h3>James</h3>
+                            <span>Happy Client</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem, 
+                        ex voluptate quod eaque amet natus inventore explicabo omnis molestiae!</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/review/fm33.jpg" alt="">
+                        <div class="UserInfo">
+                            <h3>Sophia</h3>
+                            <span>Happy Client</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem, 
+                        ex voluptate quod eaque amet natus inventore explicabo omnis molestiae!</p>
+                </div>
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-right"></i>
+                    <div class="user">
+                        <img src="images/review/m3.jpg" alt="">
+                        <div class="UserInfo">
+                            <h3>Johny</h3>
+                            <span>Happy Client</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolorem, 
+                        ex voluptate quod eaque amet natus inventore explicabo omnis molestiae!</p>
+                </div>
+
+                
+            </div>
+        </div>
+     </section>
+    <!-- review section end -->
+     
+    <!-- about start -->
+      <section id="about" class="about">
+        <h1 class="head">
+            <span>about </span> us</h1>
+
+            <div class="row">
+                <div class="img">
+                    <img src="images/about.jpg" alt="about image">
+                </div>
+                <div class="content">
+                    <h3>design is not just what it looks, design is how it works !</h3>
+                    <p> we are driven by the belief that great design is the bridge between ideas and impact.we specialize in crafting user-centric solutions that not only meet but exceed expectations,ensuring every interactive is intuitive,meaningful,and memorable.our journey started with a simple vision-to empower brands and individuals by transforming complex challenges into elegant digital experiences </p>
+                    <br>
+                    <br>
+                    <p>what sets us aprat is our communicationto exceelence and innovation.wioth a team of paassionate designers and developers ,we collabarote closely with clients to bring their visions to life.we believe that the power of design lies in understanding people ,solving their problems, and creativity,precision,and a deep understanding of technology to deliver results that inspire and endure.
+                    </p>
+                    <a href="#" class="btn">contact us</a>
+
+                </div>
+
+            </div>
+      </section>
+    <!-- about end -->
+
+    <!-- Contact start -->
+      <section id="Contact" class="contact">
+        <h1 class="head"><span>Book</span> Now</h1>
+        <div class="hero">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="bbtn"></div>
+                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                </div>
+                <div class="social-icons">
+                    <img src="images/googleicon1.jpg" alt="">
+                    <img src="images/fbicon1.jfif" alt="">
+                    <img src="images/twittericon1.jfif" alt="">
+                </div>
+                <form  action="post" id="login" class="input-group">
+                    <input type="text" class="input-field" placeholder="User Id " required>
+                    <input type="text" class="input-field" placeholder="Enter Password " required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Log In</button>
+                </form>
+                <form  action="post" id="register" class="input-group">
+                    <input type="text" class="input-field" placeholder="User Name " required>
+                    <input type="email" class="input-field" placeholder="Email Id " required>
+                    <input type="text" class="input-field" placeholder="Enter Password " required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div> 
+      </section>
+    <!-- Contact End -->
+     
+    <!-- theme toggle start -->
+     <div class="themeToggle">
+        <div class="toggleBtn">
+            <i class="fas fa-cog"></i>
+        </div>
+
+        <h3>Choose Color</h3>
+        
+            <div class="buttons">
+                <div class="theme-btn" style="background: #d5e6e0e6;"></div>
+                <div class="theme-btn" style="background: #000000;"></div>
+                <div class="theme-btn" style="background: #3ee9ff;"></div>
+                <div class="theme-btn" style="background: #9a56ff;"></div>
+                <div class="theme-btn" style="background: #05fe1ae6;"></div>
+                <div class="theme-btn" style="background: #330954;"></div>
+            </div>
+        
+     </div>
+     <!-- theme toggle end -->
+
+<!-- swiper js -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
+<!-- script tag -->
+     <script src="index.js"></script>  
+     
+  
+</body>
+</html>
+ 
